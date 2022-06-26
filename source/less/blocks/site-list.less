@@ -1,0 +1,32 @@
+.site-list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  min-width: 320px;
+  width: 100%;
+  left: 0;
+  top: 59px;
+}
+
+.site-list__link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: @text-primary;
+  text-decoration: none;
+  background-color: @background-primary;
+  text-align: center;
+  border-bottom: 1px solid @nav-decoration;
+
+  &:first-child {
+    border-top: 1px solid @nav-decoration;
+  }
+
+  &:active {
+    background-color: @nav-decoration;
+  }
+}

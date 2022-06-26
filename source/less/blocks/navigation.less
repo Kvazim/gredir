@@ -1,0 +1,23 @@
+@media (max-width: @mobile-width-only) {
+  .navigation--close .navigation__wrapper {
+    display: none;
+  }
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation__list {
+  list-style-type: none;
+}
+
+.navigation--nojs .navigation__toggle {
+  display: none;
+}
+
+.navigation--nojs .navigation__wrapper {
+  display: block;
+  position: static;
+  padding-bottom: 290px;
+}
