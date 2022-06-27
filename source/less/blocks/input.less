@@ -16,19 +16,34 @@
   padding: 8px 10px;
   background-color: @background-primary;
   border: 2px solid @color-togle;
+  border-radius: 4px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   color: inherit;
-}
 
-.input__filter::placeholder {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: @text-base;
+  &::placeholder {
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: @text-base;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: @border-focus;
+  }
+
+  &:disabled {
+    border-color: @color-lyght-grey;
+    color: @color-lyght-grey;
+  }
+
+  &:disabled::placeholder {
+    color: @color-lyght-grey;
+  }
 }
 
 .input__filter::-webkit-outer-spin-button,

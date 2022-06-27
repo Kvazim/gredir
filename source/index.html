@@ -179,6 +179,7 @@
 
             <div class="filters__range range">
               <div class="range__scale">
+                <!--для приведение в неактивное состояние добавить класс switch--disabled-->
                 <div class="range__bar switch">
                   <button class="switch__range switch__range--min" type="button">
                     <span class="visually-hidden">Изменить минимальную цену.</span>
@@ -199,7 +200,7 @@
         </fieldset>
 
         <fieldset class="filters__price">
-          <legend class="filters__title">Наличие молока
+          <legend class="filters__title filters__title--milk">Наличие молока
 
             <label class="filters__radio radio">
               <input class="visually-hidden radio__input" type="radio" name="milk" value="nomatter" checked>
@@ -222,42 +223,47 @@
             <label class="filters__radio radio">
               <input class="visually-hidden radio__input" type="radio" name="milk" value="milk-no" disabled>
               <span class="radio__checker"></span>
-              <span class="radio__label">Без молока</span>
+              <span class="radio__label radio__label--disabled">Без молока</span>
             </label>
 
           </legend>
         </fieldset>
 
         <fieldset class="filters__price">
-          <legend class="filters__title">Страна произрастания
+            <legend class="filters__title filters__title--country">Страна произрастания
 
-            <label class="filters__checkbox checkbox">
-              <input class="checkbox__input" type="checkbox" checked>
-              <span class="checkbox__label">Бразилия</span>
-            </label>
+              <label class="filters__checkbox checkbox">
+                <input class="visually-hidden checkbox__input" type="checkbox" checked>
+                <span class="checkbox__checker"></span>
+                <span class="checkbox__label">Бразилия</span>
+              </label>
 
-            <label class="filters__checkbox checkbox">
-              <input class="checkbox__input" type="checkbox">
-              <span class="checkbox__label">Эфиопия</span>
-            </label>
+              <label class="filters__checkbox checkbox">
+                <input class="visually-hidden checkbox__input" type="checkbox">
+                <span class="checkbox__checker"></span>
+                <span class="checkbox__label">Эфиопия</span>
+              </label>
 
-            <label class="filters__checkbox checkbox">
-              <input class="checkbox__input" type="checkbox">
-              <span class="checkbox__label">Колумбия</span>
-            </label>
+              <label class="filters__checkbox checkbox">
+                <input class="visually-hidden checkbox__input" type="checkbox">
+                <span class="checkbox__checker"></span>
+                <span class="checkbox__label">Колумбия</span>
+              </label>
 
-            <label class="filters__checkbox checkbox">
-              <input class="checkbox__input" type="checkbox">
+              <label class="filters__checkbox checkbox">
+              <input class="visually-hidden checkbox__input" type="checkbox">
+              <span class="checkbox__checker"></span>
               <span class="checkbox__label">Коста-Рика</span>
-            </label>
+              </label>
 
-            <label class="filters__checkbox checkbox">
-              <input class="checkbox__input" type="checkbox" disabled>
-              <span class="checkbox__label">Перу</span>
-            </label>
-          </legend>
-          <button class="filters__reset" type="reset">Сбросить фильтр</button>
-        </fieldset>
+              <label class="filters__checkbox checkbox">
+                <input class="visually-hidden checkbox__input" type="checkbox" disabled>
+                <span class="checkbox__checker"></span>
+                <span class="checkbox__label checkbox__label--disabled">Перу</span>
+              </label>
+            </legend>
+          </fieldset>
+        <button class="filters__reset" type="reset">Сбросить фильтр</button>
       </form>
     </section>
 
