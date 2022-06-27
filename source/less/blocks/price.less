@@ -1,0 +1,43 @@
+.price__old {
+  margin-right: 6px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: @text-secondary;
+}
+
+.price__full {
+  margin-right: 20px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.price__button {
+  display: inline-block;
+  width: 113px;
+  height: 40px;
+  padding: 8px 0;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: @text-secondary;
+  color: @background-primary;
+
+  &:hover,
+  &:focus {
+    border: none;
+    outline: none;
+    background-color: @button-foces;
+  }
+
+  &:active {
+    background-color: @border-focus;
+  }
+
+  &--disabled {
+    background-color: @text-base;
+  }
+}

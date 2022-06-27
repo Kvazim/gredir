@@ -75,7 +75,7 @@
       <h2 class="visually-hidden">Наши новинки</h2>
 
       <ul class="promo__list">
-        <li class="promo__item slider">
+        <li class="promo__item slider slider--flat-white">
           <picture>
             <source media="(min-width: 1440px)" type="image/webp" srcset="./img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" srcset="./img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x">
@@ -92,11 +92,11 @@
           <div class="slider__price price">
             <del class="price__old">295₽</del>
             <span class="price__full">225₽</span>
-            <a class="price__button button" href="#">Заказать</a>
+            <a class="price__button" href="#">Заказать</a>
           </div>
         </li>
 
-        <li class="promo__item slider">
+        <li class="promo__item slider slider--lavender-latte">
           <picture>
             <source media="(min-width: 1440px)" type="image/webp" srcset="./img/lavender-latte-desktop.webp 1x, img/lavender-latte-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" srcset="./img/lavender-latte-tablet.webp 1x, img/lavender-latte-tablet@2x.webp 2x">
@@ -113,11 +113,12 @@
           <div class="slider__price price">
             <del class="price__old">285₽</del>
             <span class="price__full">265₽</span>
-            <a class="price__button button" href="#">Заказать</a>
+            <!--при деакцивации добавить клас price__button--disabled-->
+            <a class="price__button" href="#">Заказать</a>
           </div>
         </li>
 
-        <li class="promo__item slider">
+        <li class="promo__item slider slider--triple-espresso">
           <picture>
             <source media="(min-width: 1440px)" type="image/webp" srcset="./img/triple-espresso-desktop.webp 1x, img/triple-espresso-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" srcset="./img/triple-espresso-tablet.webp 1x, img/triple-espresso-tablet@2x.webp 2x">
@@ -134,7 +135,7 @@
           <div class="slider__price price">
             <del class="price__old">395₽</del>
             <span class="price__full">375₽</span>
-            <a class="price__button button" href="#">Заказать</a>
+            <a class="price__button" href="#">Заказать</a>
           </div>
         </li>
       </ul>
@@ -273,7 +274,7 @@
       <div class="products__sorting sorting">
         <h3 class="sorting__title">Сортировка:</h3>
           <label class="visually-hidden" for="sorting__input">Сортировка продукции</label>
-            <select name="sorting__input" id="sorting__input">
+            <select class="sorting__input" name="sorting__input" id="sorting__input">
               <option value="default" selected>по умолчанию</option>
               <option value="expensive">сначала дорогие</option>
               <option value="cheap">сначала дешёвые</option>
