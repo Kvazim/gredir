@@ -442,19 +442,30 @@
       <div class="products__pagination ordered">
         <ol class="ordered__list">
           <li class="ordered__item">
-            <a class="ordered__link" href="#">Назад</a>
+            <!--при отключении добавить клас ordered__link--disabled -->
+            <a class="ordered__link arrow" href="#">
+              <svg class="arrow__icon arrow__icon--prew" width="6" height="10" role="img" viewBox="0 0 6 10">
+                <use xlink:href="./img/sprite.svg#arrow-ordered"></use>
+              </svg>
+              <span class="arrow__text arrow__text--prew">Назад</span>
+            </a>
           </li>
           <li class="ordered__item">
             <a class="ordered__link" href="#">1</a>
           </li>
           <li class="ordered__item">
-            <a class="ordered__link" href="#">2</a>
+            <a class="ordered__link ordered__link--activ" href="#">2</a>
           </li>
           <li class="ordered__item">
             <a class="ordered__link" href="#">3</a>
           </li>
           <li class="ordered__item">
-            <a class="ordered__link" href="#">Вперед</a>
+            <a class="ordered__link arrow" href="#">
+              <svg class="arrow__icon arrow__icon--next" width="6" height="10" role="img" viewBox="0 0 6 10">
+                <use xlink:href="./img/sprite.svg#arrow-ordered"></use>
+              </svg>
+              <span class="arrow__text arrow__text--next">Вперед</span>
+            </a>
           </li>
         </ol>
       </div>
@@ -462,6 +473,10 @@
 
     <section class="map map--nojs">
       <h2 class="visually-hidden">Наше местоположение на карте</h2>
+
+      <!--блок для вставки карты-->
+      <div class="map__canvas"></div>
+
       <picture>
         <source media="(min-width: 1150px)" type="image/webp" srcset="./img/map/map-desktop.webp 1x, ./img/map/map-desktop@2x.webp 2x">
         <source media="(min-width: 768px)" type="image/webp" srcset="./img/map/map-tablet.webp 1x, ./img/map/map-tablet@2x.webp 2x">
@@ -490,7 +505,7 @@
         </li>
         <li class="social__item">
           <a class="social__link" href="#">
-            <svg class="social__icon" width="22" height="22" role="img" aria-label="Мы в pinterest." viewBox="0 0 22 22">
+            <svg class="social__icon"width="22" height="22" role="img" aria-label="Мы в pinterest." viewBox="0 0 22 22">
               <use xlink:href="./img/sprite.svg#pinterest"></use>
             </svg>
           </a>
@@ -542,19 +557,21 @@
       <h3 class="contacts__title">Контакты</h3>
       <ul class="contacts__list">
         <li class="contacts__item">
-          <p class="contacts__adress">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+          <p class="contacts__data contacts__data--adress">Санкт-Петербург, набережная реки Карповки, дом 5</p>
         </li>
         <li class="contacts__item">
-          <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+          <a class="contacts__data contacts__data--phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
         </li>
       </ul>
     </section>
-    <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
-      Разработано в HTML Academy
+    <p class="page-footer__copyright copyright">Разработано в
+    <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      HTML Academy
       <svg class="copyright__icon" width="12" height="16" role="img" aria-label="Логотип компании HTML Academy." viewBox="0 0 12 16">
         <use xlink:href="./img/sprite.svg#copyright-logo"></use>
       </svg>
     </a>
+  </p>
   </footer>
 <script src="js/script.js"></script>
 </body>
