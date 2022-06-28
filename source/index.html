@@ -71,11 +71,11 @@
   <main class="page-main">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
-    <section class="promo">
+    <section class="promo promo--nojs">
       <h2 class="visually-hidden">Наши новинки</h2>
 
       <ul class="promo__list">
-        <li class="promo__item slider slider--flat-white">
+        <li class="promo__item slider slider--active slider--flat-white">
           <picture>
             <source media="(min-width: 1440px)" type="image/webp" srcset="./img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" srcset="./img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x">
@@ -139,6 +139,16 @@
           </div>
         </li>
       </ul>
+      <button class="promo__button promo__button--prew">
+        <svg class="promo__icon promo__icon--prew" width="11" height="20" role="img" viewBox="0 0 11 20">
+          <use xlink:href="./img/sprite.svg#promo-arrow"></use>
+        </svg>
+      </button>
+      <button class="promo__button promo__button--next">
+        <svg class="promo__icon promo__icon--next" width="11" height="20" role="img" viewBox="0 0 11 20">
+          <use xlink:href="./img/sprite.svg#promo-arrow"></use>
+        </svg>
+      </button>
     </section>
 
     <section class="advantages">

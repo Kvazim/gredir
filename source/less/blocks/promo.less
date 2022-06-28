@@ -1,0 +1,55 @@
+.promo {
+  position: relative;
+}
+
+.promo__item {
+  display: none;
+}
+
+.promo--nojs .promo__item {
+  display: block;
+}
+
+.promo__button {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &--prew {
+    top: 0;
+    left: -25px;
+  }
+
+  &--next {
+    top: 0;
+    right: -25px;
+  }
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, @background-primary 0%, @background-primary 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, @text-secondary-activ 0%, @text-secondary 100%);
+  }
+
+  &:disabled {
+    fill: @text-base;
+  }
+}
+
+.promo__icon {
+  align-self: center;
+  fill: @text-secondary;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
