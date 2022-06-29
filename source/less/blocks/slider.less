@@ -49,5 +49,38 @@
 
 .slider__image {
   display: block;
+  margin: 0 auto;
   margin-bottom: 10px;
+}
+
+@media (min-width: @tablet-width) {
+  .slider {
+    position: relative;
+    padding: 60px 80px 308px;
+  }
+
+  .slider__badge {
+    letter-spacing: 0.04em;
+  }
+
+  .slider__title {
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  .slider__subtitle {
+    padding-left: 10px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .slider__image {
+    position: absolute;
+    width: 476px;
+    height: 476px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -198px;
+  }
 }

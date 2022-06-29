@@ -11,7 +11,7 @@
 }
 
 .filters__range {
-  padding-top: 29px;
+  padding-top: 28px;
 }
 
 .filters__title--milk,
@@ -48,5 +48,21 @@
   &:disabled {
     background-color: @color-lyght-grey;
     color: @background-primary;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
+
+  .filters__price {
+    margin-bottom: 33px;
+  }
+
+  .filters__reset {
+    grid-column: 2/3;
   }
 }

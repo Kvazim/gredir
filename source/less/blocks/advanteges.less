@@ -9,7 +9,7 @@
 }
 
 .advantages__title {
-  padding-bottom: 36px;
+  margin-bottom: 36px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -22,4 +22,23 @@
   flex-direction: column;
   flex-wrap: wrap;
   list-style-type: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__wrapper {
+    padding: 248px 26px 100px;
+  }
+
+  .advantages__title {
+    margin-bottom: 61px;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+  }
 }

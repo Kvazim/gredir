@@ -3,7 +3,7 @@
 }
 
 .features__title {
-  padding-bottom: 4px;
+  margin-bottom: 4px;
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -16,6 +16,9 @@
   position: absolute;
   width: 52px;
   height: 56px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .features--speed {
@@ -24,9 +27,6 @@
 }
 
 .features--speed::before {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   background-image: url("../img/speed.svg");
   background-repeat: no-repeat;
 }
@@ -37,9 +37,6 @@
 }
 
 .features--convenience::before {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   background-image: url("../img/convenience.svg");
   background-repeat: no-repeat;
 }
@@ -50,9 +47,6 @@
 }
 
 .features--cheerfulness::before {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   background-image: url("../img/cheerfulness.svg");
   background-repeat: no-repeat;
 }
@@ -63,9 +57,30 @@
 }
 
 .features--ecology::before {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
   background-image: url("../img/ecology.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    padding: 0;
+    padding-left: 76px;
+    text-align: start;
+  }
+
+  .features::before {
+    left: 30px;
+  }
+
+  .features__title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .features__subtitle {
+    padding-right: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

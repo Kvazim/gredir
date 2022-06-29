@@ -1,117 +1,86 @@
-let burger = document.querySelector('.toggle');
-let nav = document.querySelector('.navigation');
-let pageHeader = document.querySelector('.page-header');
-let promo = document.querySelector('.promo');
-let btnnext = document.querySelector('.promo__button--next');
-let btnprev = document.querySelector('.promo__button--prew');
-let slideItem = document.querySelectorAll('.slider');
+const burger = document.querySelector('.toggle');
+const nav = document.querySelector('.navigation');
+const pageHeader = document.querySelector('.page-header');
+const promo = document.querySelector('.promo');
+const btnnext = document.querySelector('.promo__button--next');
+const btnprev = document.querySelector('.promo__button--prew');
+const slideItem = document.querySelectorAll('.slider');
+const mapNojs = document.querySelector('.map');
+const mapCanvas = document.querySelector('.map__canvas');
+
 let i = 0;
-
-burger.addEventListener('click', function(event) {
-
-    burger.classList.toggle('toggle--activ');
-    nav.classList.toggle('navigation--close');
-});
+const ZOOM_MAP = 17;
+const CENTER_MAP = {
+  lat: 59.96832,
+  lng: 30.31756,
+};
+const LeafletParameters = {
+  TILE_LAYER: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+  ATTRIBUTION: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+};
 
 nav.classList.remove('navigation--nojs');
 pageHeader.classList.remove('page-header--nojs');
 promo.classList.remove('promo--nojs');
+mapNojs.classList.remove('map--nojs');
+
+burger.addEventListener('click', function (event) {
+
+  burger.classList.toggle('toggle--activ');
+  nav.classList.toggle('navigation--close');
+});
 
 btnnext.addEventListener('click', function (event) {
-    if (slideItem[i].classList.contains('slider--active')) {
-        slideItem[i].classList.remove('slider--active');
-        i++;
+  if (slideItem[i].classList.contains('slider--active')) {
+    slideItem[i].classList.remove('slider--active');
+    i++;
     if (i >= slideItem.length) {
-        i = 0;
-        slideItem[i].classList.add('slider--active');
+      i = 0;
+      slideItem[i].classList.add('slider--active');
     } else if (i <= slideItem.length) {
-        slideItem[i].classList.add('slider--active');
-        };
+      slideItem[i].classList.add('slider--active');
     };
+  };
 });
 
 btnprev.addEventListener('click', function (event) {
-    if (slideItem[i].classList.contains('slider--active')) {
-        slideItem[i].classList.remove('slider--active');
-        i--;
+  if (slideItem[i].classList.contains('slider--active')) {
+    slideItem[i].classList.remove('slider--active');
+    i--;
     if (i < 0) {
-        i = slideItem.length-1;
-        slideItem[i].classList.add('slider--active');
+      i = slideItem.length - 1;
+      slideItem[i].classList.add('slider--active');
     } else if (i <= slideItem.length) {
-        slideItem[i].classList.add('slider--active');
-        };
+      slideItem[i].classList.add('slider--active');
     };
+  };
 });
 
-// const navMain = document.querySelector('.main-nav');
-// const navToggle = document.querySelector('.main-nav__toggle');
 
-// navMain.classList.remove('main-nav--nojs');
+const map = L.map(mapCanvas)
+  .on('load', () => {
+    CENTER_MAP;
+  })
+  .setView(CENTER_MAP, ZOOM_MAP);
 
-// navToggle.addEventListener('click', function() {
-//   if (navMain.classList.contains('main-nav--closed')) {
-//     navMain.classList.remove('main-nav--closed');
-//     navMain.classList.add('main-nav--opened');
-//   } else {
-//     navMain.classList.add('main-nav--closed');
-//     navMain.classList.remove('main-nav--opened');
-//   }
-// });
+L.tileLayer(
+  LeafletParameters.TILE_LAYER,
+  {
+    attribution: LeafletParameters.ATTRIBUTION,
+  },
+).addTo(map);
 
-// const link = document.querySelector('.js-login');
-// const popup = document.querySelector('.modal');
-// const close = popup.querySelector('.modal__button--close');
-// const form = popup.querySelector('form');
-// const login = popup.querySelector('[name=login]');
-// const password = popup.querySelector('[name=password]');
+const mainPinIcon = L.icon({
+  iconUrl: '../img/map-pin.svg',
+  iconSize: [38, 50],
+  iconAnchor: [19, 50],
+});
 
-// let isStorageSupport = true;
-// let storage = '';
+const marker = L.marker(
+  CENTER_MAP,
+  {
+    icon: mainPinIcon,
+  },
+);
 
-// try {
-//   storage = localStorage.getItem('login');
-// } catch (err) {
-//   isStorageSupport = false;
-// }
-
-// link.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   popup.classList.add('modal--show');
-
-//   if (storage) {
-//     login.value = storage;
-//     password.focus();
-//   } else {
-//     login.focus();
-//   }
-// });
-
-// close.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   popup.classList.remove('modal--show');
-//   popup.classList.remove('modal--error');
-// });
-
-// form.addEventListener('submit', function (evt) {
-//   if (!login.value || !password.value) {
-//     evt.preventDefault();
-//     popup.classList.remove('modal--error');
-//     popup.offsetWidth = popup.offsetWidth;
-//     popup.classList.add('modal--error');
-//   } else {
-//     if (isStorageSupport) {
-//       localStorage.setItem('login', login.value);
-//     }
-//   }
-// });
-
-// window.addEventListener('keydown', function (evt) {
-//   if (evt.keyCode === 27) {
-//     evt.preventDefault();
-
-//     if (popup.classList.contains('modal--show')) {
-//       popup.classList.remove('modal--show');
-//       popup.classList.remove('modal--error');
-//     }
-//   }
-// });
+marker.addTo(map);

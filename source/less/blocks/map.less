@@ -1,5 +1,21 @@
 .map__photo {
+  display: none;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.map--nojs .map__photo {
+  display: block;
+}
+
+.map__canvas {
+  width: 100%;
+  height: 420px;
+}
+
+@media (min-width: @tablet-width) {
+  .map__canvas {
+    height: 480px;
+  }
 }

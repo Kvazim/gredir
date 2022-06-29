@@ -28,3 +28,23 @@
 .page-header--nojs {
   height: auto;
 }
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    height: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .page-header__logo {
+    padding: 0;
+    align-self: center;
+  }
+
+  .page-header__icon {
+    width: 82px;
+    height: 36px;
+  }
+}

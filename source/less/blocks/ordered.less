@@ -22,6 +22,7 @@
 
   &--activ {
     font-weight: 600;
+    background-color: transparent;
     color: @text-primary;
   }
 
@@ -69,5 +70,11 @@
 
   .arrow__text {
     display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .ordered__list {
+    justify-content: flex-end;
   }
 }

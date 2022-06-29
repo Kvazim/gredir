@@ -10,6 +10,10 @@
   display: block;
 }
 
+.promo--nojs .promo__button {
+  display: none;
+}
+
 .promo__button {
   display: flex;
   justify-content: center;
@@ -51,5 +55,15 @@
 
   &--next {
     transform: rotate(180deg);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo__button--prew {
+    left: 0;
+  }
+
+  .promo__button--next {
+    right: 0;
   }
 }
