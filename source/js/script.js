@@ -30,30 +30,21 @@ burger.addEventListener('click', function (event) {
   nav.classList.toggle('navigation--close');
 });
 
-btnnext.addEventListener('click', function (event) {
-  if (slideItem[i].classList.contains('slider--active')) {
-    slideItem[i].classList.remove('slider--active');
-    i++;
-    if (i >= slideItem.length) {
-      i = 0;
-      slideItem[i].classList.add('slider--active');
-    } else if (i <= slideItem.length) {
-      slideItem[i].classList.add('slider--active');
-    };
-  };
-});
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
 
-btnprev.addEventListener('click', function (event) {
-  if (slideItem[i].classList.contains('slider--active')) {
-    slideItem[i].classList.remove('slider--active');
-    i--;
-    if (i < 0) {
-      i = slideItem.length - 1;
-      slideItem[i].classList.add('slider--active');
-    } else if (i <= slideItem.length) {
-      slideItem[i].classList.add('slider--active');
-    };
-  };
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.promo__button--next',
+    prevEl: '.promo__button--prew',
+  },
 });
 
 const map = L.map(mapCanvas)

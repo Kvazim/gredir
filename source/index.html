@@ -9,6 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="152x152" href="./img/favicon/favicon-152.png">
   <link rel="apple-touch-icon" href="./img/favicon/apple-icon.png">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
   <link rel="stylesheet" href="./leaflet/leaflet.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="./fonts/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -79,11 +80,11 @@
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
     <section class="promo promo--nojs">
-      <div class="promo-wrapper">
+      <div class="swiper promo-wrapper">
       <h2 class="visually-hidden">Наши новинки</h2>
 
-      <ul class="promo__list">
-        <li class="promo__item slider slider--active slider--flat-white">
+      <ul class="swiper-wrapper promo__list">
+        <li class="swiper-slide promo__item slider slider--active slider--flat-white">
           <picture>
             <source media="(min-width: 1440px)" type="image/webp" srcset="./img/flat-white-desktop.webp 1x, img/flat-white-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" srcset="./img/flat-white-tablet.webp 1x, img/flat-white-tablet@2x.webp 2x">
@@ -92,7 +93,7 @@
             <source media="(min-width: 768px)" srcset="./img/flat-white-tablet.png 1x, ./img/flat-white-tablet@2x.png 2x">
             <img class="slider__image" src="./img/flat-white-mobile.png" srcset="./img/flat-white-mobile@2x.png 2x" alt="Кофе тройной эспрессо." width="280" height="280">
           </picture>
-
+          <div class="slider__description">
           <p class="slider__badge">Новинка!</p>
           <h3 class="slider__title">Декаф Флэт Уайт</h3>
           <p class="slider__subtitle">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -102,9 +103,10 @@
             <span class="price__full">225₽</span>
             <a class="price__button" href="#">Заказать</a>
           </div>
+        </div>
         </li>
 
-        <li class="promo__item slider slider--lavender-latte">
+        <li class="swiper-slide promo__item slider slider--lavender-latte">
           <picture>
             <source media="(min-width: 1440px)" type="image/webp" srcset="./img/lavender-latte-desktop.webp 1x, img/lavender-latte-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" srcset="./img/lavender-latte-tablet.webp 1x, img/lavender-latte-tablet@2x.webp 2x">
@@ -113,7 +115,7 @@
             <source media="(min-width: 768px)" srcset="./img/lavender-latte-tablet.png 1x, ./img/lavender-latte-tablet@2x.png 2x">
             <img class="slider__image" src="./img/lavender-latte-mobile.png" srcset="./img/lavender-latte-mobile@2x.png 2x" alt="Лавандовый кофе латте." width="280" height="280">
           </picture>
-
+          <div class="slider__description">
           <p class="slider__badge">Новинка!</p>
           <h3 class="slider__title">Лавандовый Латте</h3>
           <p class="slider__subtitle">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
@@ -124,9 +126,10 @@
             <!--при деакцивации добавить клас price__button--disabled-->
             <a class="price__button" href="#">Заказать</a>
           </div>
+          </div>
         </li>
 
-        <li class="promo__item slider slider--triple-espresso">
+        <li class="swiper-slide promo__item slider slider--triple-espresso">
           <picture>
             <source media="(min-width: 1440px)" type="image/webp" srcset="./img/triple-espresso-desktop.webp 1x, img/triple-espresso-desktop@2x.webp 2x">
             <source media="(min-width: 768px)" type="image/webp" srcset="./img/triple-espresso-tablet.webp 1x, img/triple-espresso-tablet@2x.webp 2x">
@@ -135,7 +138,7 @@
             <source media="(min-width: 768px)" srcset="./img/triple-espresso-tablet.png 1x, ./img/triple-espresso-tablet@2x.png 2x">
             <img class="slider__image" src="./img/triple-espresso-mobile.png" srcset="./img/triple-espresso-mobile@2x.png 2x" alt="Кофе тройной эспрессо." width="280" height="280">
           </picture>
-
+          <div class="slider__description">
           <p class="slider__badge">Новинка!</p>
           <h3 class="slider__title">Тройной Эспрессо</h3>
           <p class="slider__subtitle">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
@@ -145,8 +148,10 @@
             <span class="price__full">375₽</span>
             <a class="price__button" href="#">Заказать</a>
           </div>
+          </div>
         </li>
       </ul>
+      <div class="swiper-pagination promo__pagination"></div>
       <button class="promo__button promo__button--prew">
         <svg class="promo__icon promo__icon--prew" width="11" height="20" role="img" viewBox="0 0 11 20">
           <use xlink:href="./img/sprite.svg#promo-arrow"></use>
@@ -603,7 +608,8 @@
   </p>
 </div>
   </footer>
-  <script src="./leaflet/leaflet.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="./leaflet/leaflet.js"></script>
 <script src="js/script.js" type="module"></script>
 </body>
 </html>
