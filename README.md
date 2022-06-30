@@ -4,3 +4,5 @@
 - Запуск: `npm lint`
 
 Тестирует Stylelint и EditorConfig.
+
+Затраченно 40 часов
