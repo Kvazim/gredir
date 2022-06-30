@@ -56,7 +56,6 @@ btnprev.addEventListener('click', function (event) {
   };
 });
 
-
 const map = L.map(mapCanvas)
   .on('load', () => {
     CENTER_MAP;

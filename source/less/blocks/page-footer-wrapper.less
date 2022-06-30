@@ -1,0 +1,13 @@
+.page-footer-wrapper {
+  max-width: @desktop-width;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

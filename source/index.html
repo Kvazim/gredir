@@ -19,6 +19,8 @@
 
   <header class="page-header page-header--nojs">
 
+    <div class="page-header-wrapper">
+<div class="page-header__info">
     <a class="page-header__logo" href="./" aria-current="page">
       <picture>
         <source media="(min-width: 1440px)" srcset="./img/logo-desktop.svg">
@@ -27,23 +29,26 @@
       </picture>
     </a>
 
+    <p class="page-header__title">Интернет-магазин кофейных напитков</p>
+  </div>
+
     <nav class="navigation navigation--close navigation--nojs">
-<div class="navigation__wrapper">
-      <ul class="navigation__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link site-list__link--activ" href="#">Главная</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">Каталог</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">Доставка</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__link" href="#">О нас</a>
-        </li>
-      </ul>
-    </div>
+      <div class="navigation__wrapper">
+        <ul class="navigation__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--activ" href="#">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Каталог</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">Доставка</a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">О нас</a>
+          </li>
+        </ul>
+      </div>
       <ul class="navigation__list user-list">
         <li class="user-list__item">
           <a class="user-list__link" href="#">
@@ -67,12 +72,14 @@
         <span class="toggle__bar"></span>
       </button>
     </nav>
+  </div>
   </header>
 
   <main class="page-main">
     <h1 class="visually-hidden">Интернет-магазин кофейных напитков</h1>
 
     <section class="promo promo--nojs">
+      <div class="promo-wrapper">
       <h2 class="visually-hidden">Наши новинки</h2>
 
       <ul class="promo__list">
@@ -150,10 +157,11 @@
           <use xlink:href="./img/sprite.svg#promo-arrow"></use>
         </svg>
       </button>
+    </div>
     </section>
 
     <section class="advantages">
-      <div class="advantages__wrapper">
+      <div class="advantages-wrapper">
         <p class="advantages__bage bage">Преимущества</p>
         <h2 class="advantages__title">Главные причины выбрать Drink2Go</h2>
         <ul class="advantages__list">
@@ -182,6 +190,7 @@
     </section>
 
     <section class="catalog">
+      <div class="catalog-wrapper">
       <p class="catalog__bage bage">Каталог</p>
       <h2 class="catalog__title">Каталог кофейных напитков</h2>
 
@@ -277,9 +286,11 @@
           </fieldset>
         <button class="filters__reset" type="reset">Сбросить фильтр</button>
       </form>
+    </div>
     </section>
 
     <section class="products">
+      <div class="products-wrapper">
       <h2 class="visually-hidden">Найденные товары</h2>
 
       <div class="products__sorting sorting">
@@ -480,9 +491,11 @@
           </li>
         </ol>
       </div>
+    </div>
     </section>
 
     <section class="map map--nojs">
+      <div class="map-wrapper">
       <h2 class="visually-hidden">Наше местоположение на карте</h2>
 
       <!--блок для вставки карты-->
@@ -496,10 +509,12 @@
         <source media="(min-width: 768px)" srcset="./img/map/map-tablet.jpg 1x, ./img/map/map-tablet@2x.jpg 2x">
         <img class="map__photo" src="./img/map/map-mobile.jpg" srcset="./img/map/map-mobile@2x.jpg 2x" loading="lazy" alt="Наше местоположение.">
       </picture>
+    </div>
     </section>
   </main>
 
   <footer class="page-footer">
+    <div class="page-footer-wrapper">
     <section class="social">
       <h2 class="visually-hidden">Мы в социальных сетях</h2>
       <a href="https://htmlacademy.ru/intensive/adaptive">
@@ -586,6 +601,7 @@
       </svg>
     </a>
   </p>
+</div>
   </footer>
   <script src="./leaflet/leaflet.js"></script>
 <script src="js/script.js" type="module"></script>
