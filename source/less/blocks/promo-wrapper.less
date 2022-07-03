@@ -1,7 +1,11 @@
 .promo-wrapper {
   position: relative;
   max-width: @desktop-width;
-  height: 656px;
   margin: 0 auto;
-  overflow: visible;
+}
+
+@media (min-width: @tablet-width) and (max-width: 1439px) {
+  .promo-wrapper {
+    overflow: visible;
+  }
 }

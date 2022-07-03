@@ -84,3 +84,22 @@
     line-height: 24px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .features {
+    padding: 76px 0 0 0;
+  }
+
+  .features::before {
+    left: 50%;
+  }
+
+  .features__title {
+    text-align: center;
+  }
+
+  .features__subtitle {
+    padding: 0;
+    text-align: center;
+  }
+}

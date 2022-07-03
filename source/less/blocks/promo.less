@@ -60,3 +60,22 @@
     right: 0;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .promo__pagination {
+    display: block;
+    padding-bottom: 60px;
+  }
+
+  .promo__pagination span {
+    width: 62px;
+    height: 4px;
+    border-radius: 0;
+    background-color: @background-primary;
+    opacity: 1;
+  }
+
+  .promo__pagination .swiper-pagination-bullet-active {
+    background-color: @text-secondary;
+  }
+}
