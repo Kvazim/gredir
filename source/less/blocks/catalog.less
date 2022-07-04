@@ -23,3 +23,17 @@
     line-height: 64px;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .catalog__bage {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-self: center;
+  }
+
+  .catalog__title {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    justify-content: center;
+  }
+}

@@ -1,4 +1,4 @@
-.catalog-filters-wrapper {
+.catalog-wrapper {
   display: flex;
   flex-direction: column;
   max-width: @desktop-width;
@@ -7,7 +7,15 @@
 }
 
 @media (min-width: @tablet-width) {
-  .catalog-filters-wrapper {
+  .catalog-wrapper {
     padding-top: 78px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-wrapper {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
   }
 }

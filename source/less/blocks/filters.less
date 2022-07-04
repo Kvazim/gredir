@@ -66,3 +66,13 @@
     grid-column: 2/3;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .filters__reset {
+    grid-column: 1/-1;
+  }
+}
