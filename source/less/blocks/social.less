@@ -53,3 +53,24 @@
     border: none;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .social {
+    grid-column: 1/2;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .social__title {
+    display: block;
+    margin-bottom: 59px;
+  }
+
+  .social__logo {
+    margin-bottom: 17px;
+  }
+
+  .social__list {
+    margin-left: 0;
+  }
+}
